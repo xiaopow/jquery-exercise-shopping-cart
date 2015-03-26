@@ -1,0 +1,31 @@
+#total-price, .total-price-label {
+  display: inline-block;
+}
+
+#total-price {
+  margin-left: 30px;
+  font-size: 36px;
+}
+
+body {
+  color: white;
+  background-color: black;
+  background: url("../images/train.jpg") no-repeat, black;
+  background-size: cover;
+  font-family: 'Coda', cursive;
+}
+
+.quantity {
+  color: black;
+}
+
+.flipboard {
+  margin-top: 20px;
+}
+
+#calc-prices-button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
