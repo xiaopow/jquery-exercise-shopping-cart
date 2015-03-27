@@ -15,7 +15,11 @@ body {
   font-family: 'Coda', cursive;
 }
 
-.quantity {
+input {
+  font-family: 'Coda', cursive;
+}
+
+.quantity, #name, #cost {
   color: black;
 }
 
@@ -23,9 +27,24 @@ body {
   margin-top: 20px;
 }
 
-#calc-prices-button {
-  margin-top: 20px;
+#calc-prices-button, #fork {
   width: 100%;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.remove {
+  color: grey;
+}
+
+#fork {
+  width: 97px;
+}
+.fork {
+  padding-left: 0px;
+}
+
+.new {
+  margin-top: 20px;
 }
