@@ -18,7 +18,7 @@ $( document ).ready(function() {
     for (i=0; i<qtys.length; i++) {
       // convert the value of each element in qtys into number and
       // multiply by corresponding item price, then add to sum
-      var price = Number($($(prices)[i]).text().replace(/\$/,""));
+      var price = Number($(prices[i]).text().replace(/\$/,""));
       var subtotal = (Number($(qtys[i]).val())) * price;
       if (subtotal != 0) {
         $($('.item-subtotal')[i]).text("$" + subtotal);
@@ -58,8 +58,8 @@ $( document ).ready(function() {
         <label>QTY</label> \
         <input class="quantity"> \
       </div> \
-      <div> \
-        <button class="remove col-xs-1"> \
+      <div class="col-xs-1"> \
+        <button class="remove"> \
           Remove \
         </button> \
       </div> \
@@ -69,9 +69,30 @@ $( document ).ready(function() {
     </div>');
   }
 
+  var sortItem = function() {
+    var prices = $('.item-price');
+    var names = $('.item-name');
+    var priceName = [];
+    for (i=0; i<prices.length; i++) {
+      var price = $(prices[i]).text().trim();
+      var name = $(names[i]).text().trim();
+      priceName.push([name,price]);
+    } 
+    priceName.sort();
+    console.log(priceName);
+    for (i=0; i<priceName.length; i++) {
+      $($('.item-name')[i]).text(priceName[i][0]);
+      $($('.item-price')[i]).text(priceName[i][1]);
+    }
+  }
+
   // var removeItem = function() {
   //   this.parents('.row').remove();
   // }
+
+  $(document).on('click', '#sort', function() {
+    sortItem();
+  });
 
   $(document).on('click', '#fork', function() {
     addItem($('#name').val(), $('#cost').val());

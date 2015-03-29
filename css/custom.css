@@ -34,9 +34,13 @@ input {
   border-color: black;
 }
 
-.remove {
+.remove, #sort{
   color: grey;
   
+}
+
+#sort {
+  width: 100%;
 }
 
 .new {
