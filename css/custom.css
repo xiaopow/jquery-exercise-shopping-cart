@@ -36,13 +36,7 @@ input {
 
 .remove {
   color: grey;
-}
-
-#fork {
-  width: 97px;
-}
-.fork {
-  padding-left: 0px;
+  
 }
 
 .new {
