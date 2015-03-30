@@ -47,6 +47,7 @@ $( document ).ready(function() {
   }
   
   var addItem = function(name,cost) {
+    name = name.charAt(0).toUpperCase() + name.slice(1);
     $('#item-list').prepend('<div class="row item"> \
       <div class="item-name col-xs-3"> \ '
       +  name + '\
